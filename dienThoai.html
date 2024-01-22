@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form name="fshop">
+        <div class="menu">
+            <label for="fname">
+                <p>Product Name : </p>
+                <input type="text" name="fname" id="fname">
+            </label>
+            <label for="fileUpload">
+                <p>Product Picture : </p>
+                <input type="file" name="fileUpload" id="fileUpload" onchange="xuLyAnh()">
+                <img id="preview" src="" alt="Preview" style="max-width: 20px; max-height: 20px;">
+            </label>
+            <label for="price">
+                <p>Product Price : </p>
+                <input type="number" name="price" id="price" required>
+            </label>
+        </div>
+        <button type="button" onclick="sell()">ADD</button>
+        <p>ĐIÊN THOẠI NỔI BẬt NHẤT</p>
+        <div id="tbl">
+            <table id="tblBody">
+                
+            </table>
+        </div>
+        <div id="tb1">
+            <button>Dat mua</button>
+        </div>
+    </form>
+
+    <script>
+        function xuLyAnh() {
+            var fileInput = document.getElementById('fileUpload');
+            var preview = document.getElementById('preview');
+
+            var file = fileInput.files[0];
+            var reader = new FileReader();
+
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = "";
+            }
+        }
+
+        function sell() {
+            var pname = fshop.fname.value;
+            var file = fshop.fileUpload.value;
+            var price = fshop.price.value;
+
+            var previewImage = document.getElementById('preview').src;
+
+            var row = "<tr>";
+            row += "<td><img src='" + previewImage + "' alt='Product Image'></td>";
+            row += "<td>" + pname + "</td>";
+            row += "<td>" + price + "</td>";
+            row += "</tr>";
+
+            document.getElementById("tblBody").innerHTML += row;
+        }
+    </script>
+</body>
+</html>
