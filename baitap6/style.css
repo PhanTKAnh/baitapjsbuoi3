@@ -1,0 +1,41 @@
+.container{
+    border: 1px solid black;
+   
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+#traffic-light {
+    width: 50px;
+    height: 150px;
+    background-color: black;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 20px;
+ 
+
+  }
+  
+  
+  .light {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 5px auto;
+    
+  }
+  
+  .light.on {
+    background-color: yellow;
+  }
+  .light.red.on {   
+    background-color: red;
+  }
+  .light.yellow.on {
+    background-color: yellow;
+  }
+  .light.green.on {
+    background-color: green;
+  }
