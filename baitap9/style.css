@@ -1,0 +1,24 @@
+body{
+    padding-left: 10px;
+    background-color: aqua;
+}
+#Format{
+    padding-block: 20px;
+     
+}
+#Format input{
+    margin: 10px;
+    border: 1px ;
+}
+.bt1:hover{
+    background-color: red;
+    color: white;
+}
+#bt2:hover{
+    background-color: red;
+    color: white;
+}
+#bt3:hover{
+    background-color: red;
+    color: white;
+}

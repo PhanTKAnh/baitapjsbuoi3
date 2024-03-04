@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/baitap9/style.css">
+</head>
+<body>
+<div id="Format">
+        
+        Fullname_Customer:
+        <input type="text" name="full" id="full"> <br>
+        Id_Pro:
+        <input type="text" name="pro" id="pro"> <br>
+        Name_Pro:
+        <input type="text" name="name" id="name"> <br>
+        Quantity_Pro:
+        <input type="text" name="Qua" id="Qua"> <br>
+        Price_Pro:
+        <input type="text" name="price" id="price"> <br>
+       
+    
+    </div>
+    <br><br>
+    <div id="bt">
+        <button onclick="save()" class="bt1">Save</button>
+        <button onclick="show()" id="bt2">Show</button>
+        <button onclick="reset() " id="bt3">Reset</button>
+    </div>
+    <br><br>
+    <table class="table" border="1">
+        <thead class="thead_dark">
+            <tr>
+                <th>Auto_Increment</th>
+                <th>Fullname_Customer</th>
+                <th>Id_Pro</th>
+                <th>Name_Pro</th>
+                <th>Quantity_pro</th>
+                <th>Price_Pro</th>
+                
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="tbl"></tbody>
+        
+       </table>
+    <script src="/baitap9/array.js"></script>
+</body>
+</html>
